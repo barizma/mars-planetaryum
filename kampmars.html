@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bilim Kampı · KampMars · Mars Planeteryum</title>
+<style>
+:root{--bg:#0f1114;--bg2:#171a1f;--cizgi:#262b33;--yazi:#e9ecf1;--soluk:#8b94a3;--bakir:#d4784a}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--yazi);line-height:1.7}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 7%;border-bottom:1px solid var(--cizgi)}
+.logo{font-weight:300;font-size:18px;letter-spacing:.35em}.logo b{color:var(--bakir);font-weight:600}
+nav ul{display:flex;gap:34px;list-style:none;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soluk)}
+nav .nbtn{background:var(--bakir);color:#1a0d06;padding:9px 18px;font-weight:700;text-decoration:none}
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:120px 7% 100px;display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center;border-bottom:1px solid var(--cizgi)}
+.gok{position:absolute;inset:-4%;z-index:-2;background:var(--bg) url(assets/samanyolu.webp) 60% 45%/cover no-repeat;animation:suzul 160s ease-in-out infinite alternate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0f1114f2 0,#0f1114b0 42%,#0f111440 100%),linear-gradient(180deg,transparent 70%,#0f1114 100%)}
+@keyframes suzul{from{transform:scale(1) translateX(0)}to{transform:scale(1.08) translateX(-2%)}}
+.hero small{font-size:12px;letter-spacing:.3em;color:var(--bakir)}
+h1{font-weight:300;font-size:clamp(36px,5vw,68px);line-height:1.08;margin:18px 0 24px;letter-spacing:-.01em}
+.hero p{color:var(--soluk);max-width:520px;font-size:17px}
+.link{display:inline-block;margin-top:34px;color:var(--yazi);text-decoration:none;font-size:13px;letter-spacing:.2em;border-bottom:1px solid var(--bakir);padding-bottom:6px}
+.gezegen{position:relative;aspect-ratio:1;width:100%;max-width:520px;justify-self:center}
+.gezegen .poster{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 28% 26%,transparent 0,#0000006e 55%,#000000e6 100%),url(assets/mars-2k.webp) 38% 50%/215% auto;box-shadow:0 0 60px #d4784a33;transition:opacity 1.2s}
+.gezegen canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.2s}
+.gezegen.hazir canvas{opacity:1}.gezegen.hazir .poster{opacity:0}
+.atif{color:var(--soluk);font-size:12px}.atif a{color:inherit}
+section{padding:90px 7%;border-bottom:1px solid var(--cizgi)}
+.bas{font-size:12px;letter-spacing:.3em;color:var(--bakir);text-transform:uppercase}
+h2{font-weight:300;font-size:36px;margin:10px 0 50px}
+.liste div{display:grid;grid-template-columns:70px 1fr 2fr 40px;gap:20px;padding:28px 0;border-top:1px solid var(--cizgi);align-items:baseline;transition:.2s}
+.liste div:last-child{border-bottom:1px solid var(--cizgi)}
+.liste div:hover{background:var(--bg2);padding-left:14px}
+.liste span{color:var(--bakir);font-size:13px}.liste h3{font-weight:400;font-size:21px}.liste p{color:var(--soluk);font-size:14px}.liste i{color:var(--soluk);font-style:normal}
+.kamp{position:relative;overflow:hidden;padding:110px 7% 0;background:radial-gradient(900px 480px at 85% 0,#d4784a55,transparent 70%),linear-gradient(180deg,#2a1710 0,#171a1f 70%);border-top:3px solid var(--bakir)}
+.kamp .ust{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end}
+.kamp .bas{font-size:13px}
+.kamp h2{font-size:clamp(54px,9vw,120px);font-weight:200;line-height:.95;letter-spacing:-.02em;margin:14px 0 26px}
+.kamp h2 b{font-weight:600;color:var(--bakir)}
+.kamp p{color:#c9b8ad;font-size:18px;max-width:560px;margin-bottom:30px}
+.btn{display:inline-block;background:var(--bakir);color:#1a0d06;padding:16px 34px;font-size:13px;font-weight:700;letter-spacing:.2em;text-decoration:none;transition:.2s}
+.btn:hover{background:#e8906a}
+.btn.o{background:none;color:var(--yazi);border:1px solid #ffffff55;margin-left:12px}
+.kamp ul{list-style:none}.kamp li{padding:18px 0;border-top:1px solid #ffffff22;color:var(--yazi);font-size:16px;display:flex;gap:16px}.kamp li:last-child{border-bottom:1px solid #ffffff22}
+.kamp li:before{content:"";width:8px;height:8px;margin-top:11px;border-radius:50%;background:var(--bakir);flex:none}
+.rakamlar{display:grid;grid-template-columns:repeat(4,1fr);margin:70px 0 0;border-top:1px solid #ffffff22}
+.rakamlar div{padding:26px 0;border-right:1px solid #ffffff22;padding-left:24px}.rakamlar div:first-child{padding-left:0}.rakamlar div:last-child{border:0}
+.rakamlar b{display:block;font-size:34px;font-weight:300;color:var(--bakir)}.rakamlar span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soluk)}
+.bant{overflow:hidden;padding:50px 0 60px;margin:0 -7.5%;border-bottom:1px solid var(--cizgi)}
+.bant .iz{display:flex;gap:2px;width:max-content;animation:akis 50s linear infinite}
+.bant:hover .iz{animation-play-state:paused}
+.f{width:280px;height:180px;flex:none;display:flex;align-items:flex-end;padding:14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fffc;background:linear-gradient(160deg,var(--a),#12151a);filter:grayscale(.3)}
+.kamp li{animation:gir .8s both}.kamp li:nth-child(2){animation-delay:.15s}.kamp li:nth-child(3){animation-delay:.3s}.kamp li:nth-child(4){animation-delay:.45s}
+.gor{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;transition-delay:var(--d,0s)}
+.gor.ok{opacity:1;transform:none}
+.kamp li{animation:none}
+.kamp h2 b{background:linear-gradient(100deg,var(--bakir) 30%,#ffd2b0 50%,var(--bakir) 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:parilti 6s linear infinite}
+@keyframes parilti{to{background-position:-250% 0}}
+.bant .iz.ters{animation-direction:reverse;animation-duration:65s;margin-top:2px}
+.f{transition:transform .4s,filter .4s}.f:hover{transform:scale(1.04);filter:none}
+.liste div{transition:.3s}
+@keyframes gir{from{opacity:0;transform:translateX(30px)}}
+@keyframes akis{to{transform:translateX(calc(-50% - 1px))}}
+@media(prefers-reduced-motion:reduce){.bant .iz,.gok,.kamp h2 b{animation:none}.gor{opacity:1;transform:none;transition:none}}
+footer{padding:40px 7%;color:var(--soluk);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.hero,.kamp .ust{grid-template-columns:1fr}.rakamlar{grid-template-columns:1fr 1fr}.rakamlar div{padding-left:0;border:0}.gezegen{max-width:320px}nav ul{display:none}.liste div{grid-template-columns:40px 1fr}.liste p,.liste i{display:none}}
+</style></head><body>
+<nav><a href="index.html" class="logo" style="color:inherit;text-decoration:none">MARS <b>PLANETERYUM</b></a><ul><li><a href="index.html#hizmetler" style="color:inherit;text-decoration:none">İş Kolları</a></li><li><a class="nbtn" href="kampmars.html">KampMars</a></li><li>Hakkımızda</li><li>İletişim</li></ul></nav>
+<section class="kamp" id="kampmars">
+<div class="gor" style="margin-bottom:30px"><a href="index.html" style="color:var(--soluk);font-size:13px;letter-spacing:.15em;text-decoration:none">← ANA SAYFA</a></div>
+<div class="ust"><div><div class="bas gor">Bilim Kampı</div><h2 class="gor" style="--d:.1s">Kamp<b>Mars</b></h2><p class="gor" style="--d:.2s">Uzman eğitmenler, sabit müfredat ve küçük gruplarla yürütülen bilim kampları. Gözlem, atölye ve uygulama bir arada.</p><div class="gor" style="--d:.3s"><a class="btn" href="#">PROGRAMI GÖR</a><a class="btn o" href="#">KAYIT VE BİLGİ</a></div></div>
+<ul><li class="gor" style="--d:0.15s">Teleskop ve gözlem uygulamaları</li><li class="gor" style="--d:0.30s">Uzay bilimleri atölyeleri</li><li class="gor" style="--d:0.45s">Yaş grubuna göre müfredat</li><li class="gor" style="--d:0.60s">Veli bilgilendirme ve güvenlik</li></ul></div>
+<div class="rakamlar"><div class="gor"><b data-son="12" data-on="8–" >0</b><span>Yaş grubu (örnek)</span></div><div class="gor" style="--d:.15s"><b data-son="5" data-son-ek=" gün">0</b><span>Program süresi (örnek)</span></div><div class="gor" style="--d:.3s"><b data-son="24">0</b><span>Kontenjan (örnek)</span></div><div class="gor" style="--d:.45s"><b data-son="6">0</b><span>Eğitmen (örnek)</span></div></div>
+<div class="bant"><div class="iz">
+<div class="f" style="--a:#6a3a24">Gözlem</div><div class="f" style="--a:#2c3d52">Atölye</div><div class="f" style="--a:#4a4038">Deney</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Gözlemi</div><div class="f" style="--a:#5a3a2c">Grup</div>
+<div class="f" style="--a:#6a3a24">Gözlem</div><div class="f" style="--a:#2c3d52">Atölye</div><div class="f" style="--a:#4a4038">Deney</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Gözlemi</div><div class="f" style="--a:#5a3a2c">Grup</div></div></div>
+<div class="bant" style="padding-top:0"><div class="iz ters">
+<div class="f" style="--a:#6a3a24">Teleskop</div><div class="f" style="--a:#2c3d52">Roket</div><div class="f" style="--a:#4a4038">Laboratuvar</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Teleskopi</div><div class="f" style="--a:#5a3a2c">Grup</div>
+<div class="f" style="--a:#6a3a24">Teleskop</div><div class="f" style="--a:#2c3d52">Roket</div><div class="f" style="--a:#4a4038">Laboratuvar</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Teleskopi</div><div class="f" style="--a:#5a3a2c">Grup</div></div></div>
+</section>
+<footer><span>© Mars Planeteryum · marsplaneteryum.com</span><span class="atif">Mars ve gökyüzü dokuları: <a href="https://www.solarsystemscope.com/textures/" rel="noopener">Solar System Scope</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a> (boyutlandırılmış, parlaklığı ayarlanmıştır)</span><span>Tel · E-posta · Adres</span></footer>
+<script src="assets/hareket.js"></script>
+</body></html>
