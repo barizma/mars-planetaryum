@@ -26,7 +26,8 @@ section{padding:34px 7% 56px;border-bottom:1px solid var(--cizgi)}
 .bas{font-size:12px;letter-spacing:.3em;color:var(--bakir);text-transform:uppercase}
 h2{font-weight:300;font-size:36px;margin:6px 0 20px}
 /* İş kolları: tam boy fotoğraf kartları (kart sayısı 4 veya 5 olabilir, ızgara kendini ayarlar) */
-.kartlar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.kartlar{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:1000px){.kartlar{grid-template-columns:1fr 1fr}.kart:last-child:nth-child(odd){grid-column:1/-1;aspect-ratio:2.2/1}}
 .kart{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:1/1.12;overflow:hidden;padding:24px 22px;isolation:isolate;color:inherit;text-decoration:none}
 .kart img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
 .kart:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,#0f1114e8 88%)}
@@ -92,7 +93,7 @@ footer{border-top:1px solid var(--cizgi);padding:40px 7%;color:var(--soluk);font
 @media(max-width:900px){.adimlar,.kimler{grid-template-columns:1fr 1fr}.adimlar div{border:0;margin-right:0;padding-right:18px}}
 @media(max-width:480px){.adimlar,.kimler{grid-template-columns:1fr}.btn.o{margin:12px 0 0}}
 @media(max-width:760px){.hero,.kamp .ust{grid-template-columns:1fr}.kamp{padding-top:70px}.rakamlar{grid-template-columns:1fr 1fr}.rakamlar div{padding-left:0;border:0}.gezegen{max-width:320px}nav ul{display:none}.kartlar{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.kartlar{grid-template-columns:1fr}.kart{aspect-ratio:4/3}}
+@media(max-width:480px){.kartlar{grid-template-columns:1fr}.kart,.kart:last-child:nth-child(odd){aspect-ratio:4/3}}
 </style></head><body>
 <nav><div class="logo">MARS <b>PLANETERYUM</b></div><ul><li><a href="#hizmetler" style="color:inherit;text-decoration:none">İş Kolları</a></li><li><a href="kampmars.html" style="color:inherit;text-decoration:none">KampMars</a></li><li><a href="#kimler" style="color:inherit;text-decoration:none">Hakkımızda</a></li><li><a href="#iletisim" style="color:inherit;text-decoration:none">İletişim</a></li></ul></nav>
 <div class="hero"><div class="gok"></div><div><small>PLANETARYUM · EĞİTİM · KAMP</small><h1>Gökyüzünü<br>profesyonelce<br>deneyimleyin.</h1><p>Gözlemevi, sabit planetaryum, çadır planetaryum ve bilim kampı tek çatı altında.</p><a class="link" href="#hizmetler">İŞ KOLLARINI İNCELE →</a></div><div class="gezegen" id="gezegen"><div class="poster"></div></div></div>
@@ -101,7 +102,8 @@ footer{border-top:1px solid var(--cizgi);padding:40px 7%;color:var(--soluk);font
 <a class="kart" href="gozlemevi-kurulum.html"><img src="assets/gozlemevi-dis.webp" alt="Gözlemevi kubbesi"><span>01</span><h3>Gözlemevi</h3><p>Kubbe, teleskop ve montaj; anahtar teslim gözlemevi kurulumu.</p><i>İNCELE →</i></a>
 <a class="kart" href="sabit-planetaryum.html"><img src="assets/planetaryum-dis.webp" alt="Sabit planetaryum binası"><span>02</span><h3>Sabit Planetaryum</h3><p>Kurum ve belediyelere kalıcı planetaryum; düzenli seans programı.</p><i>İNCELE →</i></a>
 <a class="kart" href="gezici-kubbe.html"><img src="assets/gezici-dis.webp" alt="Çadır planetaryum kubbesi"><span>03</span><h3>Çadır Planetaryum</h3><p>Okul ve etkinliklere taşınabilir kubbe; kurulum, gösteri, toplama.</p><i>İNCELE →</i></a>
-<a class="kart" href="kampmars.html"><img src="assets/kampmars-teleskop.webp" alt="KampMars'ta teleskopla gözlem yapan çocuklar"><span>04</span><h3>Bilim Kampı <small>· KampMars</small></h3><p>Gökyüzü gözlemi, deneyler ve atölyelerle dolu bilim kampları.</p><i>İNCELE →</i></a>
+<a class="kart" href="kampmars.html"><img src="assets/kampmars-gece-bahce2.webp" alt="KampMars kamp alanı, gece, arkada Çanakkale Köprüsü"><span>04</span><h3>Bilim Kampı <small>· KampMars</small></h3><p>Gökyüzü gözlemi, deneyler ve atölyelerle dolu bilim kampları.</p><i>İNCELE →</i></a>
+<a class="kart" href="bilim-merkezi.html"><img src="assets/planetaryum-ic.webp" alt="Bilim merkezi kubbe içi"><span>05</span><h3>Bilim Merkezleri</h3><p>Kurum ve belediyelere bilim merkezi; planetaryum, gözlem ve uygulamalı bilim alanları.</p><i>İNCELE →</i></a>
 </div></section>
 <section id="surec"><div class="bas">Nasıl çalışıyoruz</div><h2>Fikirden ilk gösteriye</h2>
 <div class="adimlar">
@@ -111,10 +113,10 @@ footer{border-top:1px solid var(--cizgi);padding:40px 7%;color:var(--soluk);font
 <div><h3>Eğitim ve destek</h3><p>Personelinizi eğitiyor, içerik ve bakım desteğiyle yanınızda kalıyoruz.</p></div>
 </div></section>
 <section class="kamp" id="kamp"><div class="ust">
-<div><div class="bas">Bilim kampı</div><h2>Kamp<b>Mars</b></h2><p>Çocuklar gökyüzünü teleskopla gözlemliyor, atölyelerde deney yapıyor, öğrendiğini uyguluyor.</p>
-<ul><li>Teleskop ve gece gözlemi</li><li>Uzay bilimleri atölyeleri</li><li>Yaş grubuna göre program</li></ul>
-<p style="margin-top:30px"><a class="btn" href="kampmars.html">KAMPI İNCELE</a><a class="btn o" href="#iletisim">KAYIT VE BİLGİ</a></p></div>
-<div class="foto"><img src="assets/kampmars-teleskop.webp" alt="KampMars'ta teleskopla gözlem yapan çocuklar"></div>
+<div><div class="bas">Bilim kampı</div><h2>Kamp<b>Mars</b></h2><p>Çanakkale Boğazı kıyısında, Lapseki Suluca'da çocuklara özel bilim ve uzay kampı: gündüz atölye, gece teleskopla gözlem.</p>
+<ul><li>Teleskopla gece gözlemi</li><li>Gök atlası, güneş saati, roket yapımı</li><li>Roket yarışması ve planetaryum gösterimi</li></ul>
+<p style="margin-top:30px"><a class="btn" href="kampmars.html">KAMPI İNCELE</a><a class="btn o" href="tel:+905527864313">KAYIT VE BİLGİ</a></p></div>
+<div class="foto"><img src="assets/kampmars-gece-bahce2.webp" alt="KampMars kamp alanı, gece, arkada Çanakkale Köprüsü"></div>
 </div></section>
 <section id="kimler"><div class="bas">Kimlerle çalışıyoruz</div><h2>Kime hizmet veriyoruz</h2>
 <div class="kimler">
@@ -123,7 +125,7 @@ footer{border-top:1px solid var(--cizgi);padding:40px 7%;color:var(--soluk);font
 <div><b>Üniversite ve kurumlar</b><span>Anahtar teslim gözlemevi ve araştırma teleskopları.</span></div>
 <div><b>Aileler</b><span>Hafta sonu gösterileri ve KampMars programları.</span></div>
 </div></section>
-<div class="bant foto-bant" aria-hidden="true"><div class="iz"><div class="f" style="--r:url(assets/gozlemevi-dis.webp)">Gözlemevi</div><div class="f" style="--r:url(assets/planetaryum-dis.webp)">Sabit planetaryum</div><div class="f" style="--r:url(assets/gezici-dis.webp)">Çadır planetaryum</div><div class="f" style="--r:url(assets/kampmars-teleskop.webp)">KampMars</div><div class="f" style="--r:url(assets/planetaryum-ic.webp)">Kubbe içi</div><div class="f" style="--r:url(assets/gezici-ic.webp)">Çadır kubbe içi</div><div class="f" style="--r:url(assets/samanyolu.webp)">Samanyolu</div><div class="f" style="--r:url(assets/mars-2k.webp)">Mars</div><div class="f" style="--r:url(assets/gozlemevi-dis.webp)">Gözlemevi</div><div class="f" style="--r:url(assets/planetaryum-dis.webp)">Sabit planetaryum</div><div class="f" style="--r:url(assets/gezici-dis.webp)">Çadır planetaryum</div><div class="f" style="--r:url(assets/kampmars-teleskop.webp)">KampMars</div><div class="f" style="--r:url(assets/planetaryum-ic.webp)">Kubbe içi</div><div class="f" style="--r:url(assets/gezici-ic.webp)">Çadır kubbe içi</div><div class="f" style="--r:url(assets/samanyolu.webp)">Samanyolu</div><div class="f" style="--r:url(assets/mars-2k.webp)">Mars</div></div></div>
+<div class="bant foto-bant" aria-hidden="true"><div class="iz"><div class="f" style="--r:url(assets/gozlemevi-dis.webp)">Gözlemevi</div><div class="f" style="--r:url(assets/planetaryum-dis.webp)">Sabit planetaryum</div><div class="f" style="--r:url(assets/gezici-dis.webp)">Çadır planetaryum</div><div class="f" style="--r:url(assets/kampmars-teleskop.webp)">KampMars</div><div class="f" style="--r:url(assets/planetaryum-ic.webp)">Kubbe içi</div><div class="f" style="--r:url(assets/gezici-ic.webp)">Çadır kubbe içi</div><div class="f" style="--r:url(assets/kampmars-kubbe-cadir.webp)">KampMars kubbe çadır</div><div class="f" style="--r:url(assets/kampmars-gece-bahce.webp)">KampMars gece</div><div class="f" style="--r:url(assets/gozlemevi-dis.webp)">Gözlemevi</div><div class="f" style="--r:url(assets/planetaryum-dis.webp)">Sabit planetaryum</div><div class="f" style="--r:url(assets/gezici-dis.webp)">Çadır planetaryum</div><div class="f" style="--r:url(assets/kampmars-teleskop.webp)">KampMars</div><div class="f" style="--r:url(assets/planetaryum-ic.webp)">Kubbe içi</div><div class="f" style="--r:url(assets/gezici-ic.webp)">Çadır kubbe içi</div><div class="f" style="--r:url(assets/kampmars-kubbe-cadir.webp)">KampMars kubbe çadır</div><div class="f" style="--r:url(assets/kampmars-gece-bahce.webp)">KampMars gece</div></div></div>
 <section class="cagri" id="iletisim"><div class="bas">İletişim</div><h2>Projenizi konuşalım</h2>
 <p>Gözlemevi, planetaryum ya da kamp için ihtiyacınızı anlatın; size uygun çözümü ve teklifi hazırlayalım.</p>
 <a class="btn" href="#iletisim">TEKLİF İSTE</a>

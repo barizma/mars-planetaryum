@@ -61,20 +61,79 @@ h2{font-weight:300;font-size:36px;margin:10px 0 50px}
 @media(prefers-reduced-motion:reduce){.bant .iz,.gok,.kamp h2 b{animation:none}.gor{opacity:1;transform:none;transition:none}}
 footer{padding:40px 7%;color:var(--soluk);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:760px){.hero,.kamp .ust{grid-template-columns:1fr}.rakamlar{grid-template-columns:1fr 1fr}.rakamlar div{padding-left:0;border:0}.gezegen{max-width:320px}nav ul{display:none}.liste div{grid-template-columns:40px 1fr}.liste p,.liste i{display:none}}
+.f.r{background:linear-gradient(180deg,transparent 45%,#0f1114d9),var(--r) center/cover;filter:none;width:300px;height:220px}
+.prog,.neden,.iletisim{padding:90px 7%}
+.not{color:var(--soluk);max-width:760px;margin:-30px 0 40px;font-size:15px}
+.gunler,.uc{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.gunler>div,.uc>div{background:var(--bg2);padding:30px 28px;border-top:3px solid var(--bakir)}
+.gunler span{color:var(--bakir);font-size:12px;letter-spacing:.25em}.gunler h3{font-weight:400;font-size:22px;margin:6px 0 14px}
+.gunler ul{list-style:none;padding:0}.gunler li{padding:8px 0;border-top:1px solid var(--cizgi);color:#c9ccd2;font-size:15px}
+.uc b{display:block;font-size:22px;font-weight:400;color:var(--bakir);margin-bottom:8px}.uc p{color:var(--soluk);font-size:15px}
+.kanallar{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.kanallar a{background:var(--bg2);padding:26px 28px;color:var(--yazi);text-decoration:none;font-size:22px;font-weight:300;border-bottom:2px solid transparent;transition:.2s}
+.kanallar a:hover{border-bottom-color:var(--bakir)}.kanallar span{display:block;font-size:11px;letter-spacing:.25em;color:var(--bakir);margin-bottom:6px}
+.rakamlar b{font-size:30px}
+@media(max-width:760px){.gunler,.uc,.kanallar{grid-template-columns:1fr}.f.r{width:230px;height:170px}.btn.o{margin:12px 0 0}}
 </style></head><body>
-<nav><a href="index.html" class="logo" style="color:inherit;text-decoration:none">MARS <b>PLANETERYUM</b></a><ul><li><a href="index.html#hizmetler" style="color:inherit;text-decoration:none">İş Kolları</a></li><li><a class="nbtn" href="kampmars.html">KampMars</a></li><li>Hakkımızda</li><li>İletişim</li></ul></nav>
+<nav><a href="index.html" class="logo" style="color:inherit;text-decoration:none">MARS <b>PLANETERYUM</b></a><ul><li><a href="index.html#hizmetler" style="color:inherit;text-decoration:none">İş Kolları</a></li><li><a class="nbtn" href="kampmars.html">KampMars</a></li><li><a href="index.html#iletisim" style="color:inherit;text-decoration:none">İletişim</a></li></ul></nav>
 <section class="kamp" id="kampmars">
 <div class="gor" style="margin-bottom:30px"><a href="index.html" style="color:var(--soluk);font-size:13px;letter-spacing:.15em;text-decoration:none">← ANA SAYFA</a></div>
-<div class="ust"><div><div class="bas gor">Bilim Kampı</div><h2 class="gor" style="--d:.1s">Kamp<b>Mars</b></h2><p class="gor" style="--d:.2s">Uzman eğitmenler, sabit müfredat ve küçük gruplarla yürütülen bilim kampları. Gözlem, atölye ve uygulama bir arada.</p><div class="gor" style="--d:.3s"><a class="btn" href="#">PROGRAMI GÖR</a><a class="btn o" href="#">KAYIT VE BİLGİ</a></div></div>
-<ul><li class="gor" style="--d:0.15s">Teleskop ve gözlem uygulamaları</li><li class="gor" style="--d:0.30s">Uzay bilimleri atölyeleri</li><li class="gor" style="--d:0.45s">Yaş grubuna göre müfredat</li><li class="gor" style="--d:0.60s">Veli bilgilendirme ve güvenlik</li></ul></div>
-<div class="rakamlar"><div class="gor"><b data-son="12" data-on="8–" >0</b><span>Yaş grubu (örnek)</span></div><div class="gor" style="--d:.15s"><b data-son="5" data-son-ek=" gün">0</b><span>Program süresi (örnek)</span></div><div class="gor" style="--d:.3s"><b data-son="24">0</b><span>Kontenjan (örnek)</span></div><div class="gor" style="--d:.45s"><b data-son="6">0</b><span>Eğitmen (örnek)</span></div></div>
+<div class="ust"><div><div class="bas gor">Bilim ve Uzay Kampı · Lapseki, Çanakkale</div><h2 class="gor" style="--d:.1s">Kamp<b>Mars</b></h2><p class="gor" style="--d:.2s">Çanakkale Boğazı kıyısında, Suluca'da çocuklara özel bilim ve uzay kampı. Gündüz atölye ve dersler, gece teleskopla gökyüzü gözlemi.</p><div class="gor" style="--d:.3s"><a class="btn" href="#program">PROGRAMI GÖR</a><a class="btn o" href="tel:+905527864313">KAYIT VE BİLGİ</a></div></div>
+<ul><li class="gor" style="--d:0.15s">Teleskopla gece gözlemi: Ay, gezegenler, yıldızlar, gökadalar</li><li class="gor" style="--d:0.30s">Atölyeler: gök atlası, güneş saati, roket yapımı</li><li class="gor" style="--d:0.45s">Roket yarışması ve planetaryum gösterimi</li><li class="gor" style="--d:0.60s">Astronomi tarihi, uzay teknolojileri, dünya dışı yaşam dersleri</li></ul></div>
+<div class="rakamlar"><div class="gor"><b>5–13</b><span>Yaş</span></div><div class="gor" style="--d:.15s"><b>2–3 gece</b><span>Program süresi</span></div><div class="gor" style="--d:.3s"><b>Otel · Çadır</b><span>Konaklama</span></div><div class="gor" style="--d:.45s"><b>Lapseki</b><span>Suluca · Çanakkale</span></div></div>
 <div class="bant"><div class="iz">
-<div class="f" style="--a:#6a3a24">Gözlem</div><div class="f" style="--a:#2c3d52">Atölye</div><div class="f" style="--a:#4a4038">Deney</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Gözlemi</div><div class="f" style="--a:#5a3a2c">Grup</div>
-<div class="f" style="--a:#6a3a24">Gözlem</div><div class="f" style="--a:#2c3d52">Atölye</div><div class="f" style="--a:#4a4038">Deney</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Gözlemi</div><div class="f" style="--a:#5a3a2c">Grup</div></div></div>
+<div class="f r" style="--r:url(assets/kampmars-gece-bahce.webp)">Gece bahçesi</div>
+<div class="f r" style="--r:url(assets/kampmars-kubbe-cadir.webp)">Kubbe çadır</div>
+<div class="f r" style="--r:url(assets/kampmars-deniz-cadir.webp)">Sahil</div>
+<div class="f r" style="--r:url(assets/kampmars-teleskop-gece.webp)">Teleskop başında</div>
+<div class="f r" style="--r:url(assets/kampmars-sis.webp)">Sisli sabah</div>
+<div class="f r" style="--r:url(assets/kampmars-gece-bahce2.webp)">Köprü manzarası</div>
+<div class="f r" style="--r:url(assets/kampmars-cam-bahce.webp)">Çamlık</div>
+<div class="f r" style="--r:url(assets/kampmars-gece-oturma.webp)">Gece gözlemi</div>
+<div class="f r" style="--r:url(assets/kampmars-teleskop.webp)">Gözlem</div>
+<div class="f r" style="--r:url(assets/kampmars-gece-bahce.webp)">Gece bahçesi</div>
+<div class="f r" style="--r:url(assets/kampmars-kubbe-cadir.webp)">Kubbe çadır</div>
+<div class="f r" style="--r:url(assets/kampmars-deniz-cadir.webp)">Sahil</div>
+<div class="f r" style="--r:url(assets/kampmars-teleskop-gece.webp)">Teleskop başında</div>
+<div class="f r" style="--r:url(assets/kampmars-sis.webp)">Sisli sabah</div>
+<div class="f r" style="--r:url(assets/kampmars-gece-bahce2.webp)">Köprü manzarası</div>
+<div class="f r" style="--r:url(assets/kampmars-cam-bahce.webp)">Çamlık</div>
+<div class="f r" style="--r:url(assets/kampmars-gece-oturma.webp)">Gece gözlemi</div>
+<div class="f r" style="--r:url(assets/kampmars-teleskop.webp)">Gözlem</div></div></div>
 <div class="bant" style="padding-top:0"><div class="iz ters">
-<div class="f" style="--a:#6a3a24">Teleskop</div><div class="f" style="--a:#2c3d52">Roket</div><div class="f" style="--a:#4a4038">Laboratuvar</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Teleskopi</div><div class="f" style="--a:#5a3a2c">Grup</div>
-<div class="f" style="--a:#6a3a24">Teleskop</div><div class="f" style="--a:#2c3d52">Roket</div><div class="f" style="--a:#4a4038">Laboratuvar</div><div class="f" style="--a:#7a4026">Uygulama</div><div class="f" style="--a:#2a4a60">Gece Teleskopi</div><div class="f" style="--a:#5a3a2c">Grup</div></div></div>
+<div class="f" style="--a:#6a3a24">Gök atlası</div>
+<div class="f" style="--a:#2c3d52">Güneş saati</div>
+<div class="f" style="--a:#4a4038">Roket yapımı</div>
+<div class="f" style="--a:#7a4026">Roket yarışması</div>
+<div class="f" style="--a:#2a4a60">Planetaryum</div>
+<div class="f" style="--a:#5a3a2c">Teleskopla gözlem</div>
+<div class="f" style="--a:#6a3a24">Astronomi tarihi</div>
+<div class="f" style="--a:#2c3d52">Kamp ateşi</div>
+<div class="f" style="--a:#6a3a24">Gök atlası</div>
+<div class="f" style="--a:#2c3d52">Güneş saati</div>
+<div class="f" style="--a:#4a4038">Roket yapımı</div>
+<div class="f" style="--a:#7a4026">Roket yarışması</div>
+<div class="f" style="--a:#2a4a60">Planetaryum</div>
+<div class="f" style="--a:#5a3a2c">Teleskopla gözlem</div>
+<div class="f" style="--a:#6a3a24">Astronomi tarihi</div>
+<div class="f" style="--a:#2c3d52">Kamp ateşi</div></div></div>
 </section>
-<footer><span>© Mars Planeteryum · marsplaneteryum.com</span><span class="atif">Mars ve gökyüzü dokuları: <a href="https://www.solarsystemscope.com/textures/" rel="noopener">Solar System Scope</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a> (boyutlandırılmış, parlaklığı ayarlanmıştır)</span><span>Tel · E-posta · Adres</span></footer>
+<section id="program" class="prog">
+<div class="bas gor">Örnek program</div><h2 class="gor">Üç günde neler yapılıyor</h2>
+<p class="not gor">Kasım 2024 döneminin programıdır (2 gece 3 gün). Ara tatil dönemlerinde 3 gece 4 günlük aile katılımlı programlar da yapılır; bu programlara Truva antik kenti gezisi ve ÇOMÜ Gözlemevi ziyareti dahildir. Güncel tarih ve ücret için arayın.</p>
+<div class="gunler">
+<div class="gor"><span>1. GÜN</span><h3>Gökyüzüne giriş</h3><ul><li>Bilim tarihi: astronomi</li><li>Gök atlası yapımı</li><li>Yıldızların dansı</li><li>Mobil astronomi uygulamaları</li><li>Gece: teleskopla yıldız ve gökada gözlemi, kamp ateşi</li></ul></div>
+<div class="gor" style="--d:.15s"><span>2. GÜN</span><h3>Roket günü</h3><ul><li>Çanakkale Boğazı yürüyüşü</li><li>Roket yapımı</li><li>Ödüllü roket fırlatma yarışması</li><li>Planetaryum gösterimi</li><li>Gece: çocuklara özel canlı müzik ve etkinlikler</li></ul></div>
+<div class="gor" style="--d:.3s"><span>3. GÜN</span><h3>Veda</h3><ul><li>Neler yaptık, neler öğrendik</li><li>Yarışma sonuçları ve ödüller</li><li>Katılım sertifikası</li></ul></div>
+</div></section>
+<section class="neden">
+<div class="bas gor">Neden astronomi kampı</div><h2 class="gor">Ekrandan değil, gökyüzünden öğrenmek</h2>
+<div class="uc"><div class="gor"><b>Görerek</b><p>Ders kitabındaki Satürn'ün halkasını ve Ay kraterlerini teleskopta kendi gözüyle görür.</p></div><div class="gor" style="--d:.15s"><b>Yaparak</b><p>Gök atlasını, güneş saatini ve roketini kendi elleriyle yapar, yarışmada fırlatır.</p></div><div class="gor" style="--d:.3s"><b>Birlikte</b><p>Grup çalışması, kamp ateşi ve gece gözlemiyle merakını arkadaşlarıyla paylaşır.</p></div></div>
+</section>
+<section class="iletisim">
+<div class="bas gor">Kayıt ve bilgi</div><h2 class="gor">Kontenjan sınırlıdır</h2>
+<div class="kanallar gor"><a href="tel:+905527864313"><span>TELEFON</span>0552 786 43 13</a><a href="https://www.instagram.com/kampmars_/" rel="noopener" target="_blank"><span>INSTAGRAM</span>@kampmars_</a><a href="https://www.instagram.com/kamp_mars/" rel="noopener" target="_blank"><span>INSTAGRAM</span>@kamp_mars</a></div>
+</section>
+<footer><span>© Mars Planeteryum · marsplaneteryum.com</span><span class="atif">Mars ve gökyüzü dokuları: <a href="https://www.solarsystemscope.com/textures/" rel="noopener">Solar System Scope</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a> (boyutlandırılmış, parlaklığı ayarlanmıştır)</span><span><a href="tel:+905527864313" style="color:inherit">0552 786 43 13</a> · Instagram <a href="https://www.instagram.com/kampmars_/" style="color:inherit">@kampmars_</a></span></footer>
 <script src="assets/hareket.js"></script>
 </body></html>
